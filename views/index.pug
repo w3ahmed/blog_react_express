@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  section.section 
+    if dataarticles.data
+      each article in dataarticles.data
+        article.article
+          .card
+            img(src=`/images/${article.img}`, alt="", class="card__img")
+            .card__info
+              a(href=`/category/${article.cateid}` class="textCap")= article.catename
+              a(href=`/article/${article._id}` class="cardTitle"): h3= article.title
+  
+  
+  .flex.justCenter.pagenation
+    if dataarticles.currentPage > 1 || dataarticles.currentPage >= dataarticles.count
+      a(href=`?page=${dataarticles.currentPage - 1}`) Previous
+    else
+      button(disabled) Previous 
+    form(method="get", id="formPageCount") 
+      - let i = 0 ;
+      select(name="page", id="pageCount", class="selectPage")
+        while i <  dataarticles.count
+          - i++
+          if i == dataarticles.currentPage
+            option(value=i, selected)= i
+          else 
+            option(value=i)= i
+
+    if dataarticles.currentPage < dataarticles.count
+      a(href=`?page=${dataarticles.currentPage + 1}`) Next
+    else 
+      button(disabled) Next 

@@ -1,0 +1,44 @@
+extends layout 
+
+block content 
+    main
+        .content.container.flex
+            .flex.spaceBetween
+                .date= dataarticle.date
+                a(href="/category/"+dataarticle.cateid class="textCap")= dataarticle.catename
+            .divider
+            .flex
+                h3.articleTitle= dataarticle.title
+            img(src="/images/"+dataarticle.img, alt="", class="article__img")
+            .flex
+                div.contentArticle!= dataarticle.content 
+                
+                
+        .info.container.flex
+            .info__title Information Author
+            .flex.author
+                img(src="/images/"+dataarticle.author.img, alt="", class="info__img")
+                .info__author
+                    a(href=`/profile/${dataarticle.author._id}` class="nameAuthor textCap"): b= dataarticle.author.fullname
+                    .job.textCap= dataarticle.author.job
+            
+        .comments.container.flex
+            .comments__title Comments 
+                span.countComment= dataarticle.comments.length
+            ul.flex.commentList#commentList
+                each comment in dataarticle.comments 
+                    li(id=comment._id) 
+                        .flex.commentHead
+                            img(src="/images/"+comment.userimg, alt=comment.username, class="commentImg")
+                            div.userInfo
+                                a(href=`/profile/${comment.userid}` class="textCap")= comment.username
+                                .date= comment.date
+                        p.flex.commentText= comment.comment
+
+            if session
+                #commentReact.comments__form
+            else 
+                .qaForm.logComment
+                    a(href="/login") Login first for share comment
+    if session
+        script(src="/javascripts/comment.js") 

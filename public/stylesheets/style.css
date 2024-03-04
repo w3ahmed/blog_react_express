@@ -1,0 +1,631 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.success{
+  background-color: rgb(45, 134, 45);
+}
+.primary{
+  background-color: #1a73e8;
+}
+.danger{
+  background-color: #d5463a;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+select{
+  padding: 10px;
+}
+.fullTable{
+  overflow: auto;
+}
+table{
+  width: 100%;
+}
+ table, td, th{
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+thead tr{
+  border-bottom: 1px solid rgb(82, 81, 81);
+}
+tbody tr{
+  background-color: #d7d7dd;
+}
+tr:nth-child(even){
+  background-color: transparent;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ececec;
+}
+.foot{
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+.nav{
+  background-color: white;
+  padding: 5px 10px;
+  box-shadow: 0 5px 5px 0 rgb(139 139 139 / 20%), 0 6px 20px 0 rgb(135 135 135 / 19%);
+
+}
+.links-sm > *{
+  display: block !important;
+  padding-top: 10px;
+}
+.links-sm > span > button{
+  width: 100%;
+  text-align: left;
+}
+.nav__link{
+  display: inline-block;
+  padding: 9px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.logo{
+  text-align: center;
+}
+.logo a{
+  letter-spacing: 5px;
+}
+.button__list{
+  position: relative;
+  display: inline-block;
+}
+.list__cate, .list__cate-sm{
+  position: absolute;
+  top: 40px;
+  width: max-content;
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #e1e1e1;
+  background-color: #f5f5f5;
+  display: none;
+}
+.list__cate-sm{
+  position: unset !important;
+  width: 100% !important;
+}
+.list__cate-sm > *{
+  width: max-content;
+}
+.list__cate > *{
+  padding: 5px;
+}
+img.imgMenuProfile{
+  width: 2rem;
+}
+ul.listMenuProfile{
+  right: 0;
+  left: unset !important;
+}
+.menuActive{
+  display: block !important;
+}
+.logout{
+  right: 0;
+  left: unset;
+}
+.active{
+  display: block;
+}
+.login a , .login-sm a{
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  background-color:#1a73e8;
+}
+.login-sm a{
+  width: 100%;
+}
+.section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.textCap{
+  text-transform: capitalize;
+}
+.card{
+  box-shadow: 0 8px 16px 0 rgb(10 14 29 / 2%), 0 8px 64px 0 rgb(119 119 119 / 8%);
+  border-radius: 5px;
+  background-color: white;
+}
+.card__img{
+  width: 100%;
+  height: 30vh;
+  border-radius: 5px;
+}
+.card__info{
+  padding: 10px;
+}
+.card__info .cardTitle{
+  padding: 5px 0;
+  display: block;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.alignItem{
+  align-items: center;
+}
+.spaceBetween{
+  justify-content: space-between;
+}
+.spaceAround{
+  justify-content: space-around;
+}
+.justCenter{
+  justify-content: center;
+}
+.divider{
+  width: 100%;
+  border-bottom: 0.5px solid rgba(185, 185, 185, 0.527);
+  margin: 10px 0;
+}
+.content > *{
+  width: 100%;
+}
+.article__img{
+  height: 30vw;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+}
+.articleTitle{
+  padding: 0.5rem 0;
+}
+.contentArticle > *{
+  padding: 0.5rem 0;
+}
+.nameAuthor,.info__title, .comments__title{
+  font-size: 1rem;
+}
+.info__title, .comments__title{
+  width: 100%;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.info__img{
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+.author > *{
+  padding: 10px
+}
+.info__author{
+  align-self: center;
+}
+.comments__form{
+  width: 100%;
+  margin: 5px 0;
+}
+.comments__form textarea ,.comments__form input{
+  padding: 10px;
+  border-radius: 5px;
+}
+.comments__form textarea{
+  width: 100%;
+  resize: none;
+}
+.comments__form input{
+  width: 25%;
+  background-color: rgb(0, 71, 129);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.logComment{
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.logPage > *{
+  margin: 20px 2px;
+}
+.logTitle{
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  color: rgb(3, 65, 235);
+}
+.btn__signin:hover, .btn__signup:hover{
+  background-color: #333;
+}
+
+.errCheck{
+  color: #e52323;
+  border: none;
+  padding: 10px 0;
+}
+.sideNav{
+  width: 20%;
+  padding-top: 20px;
+  min-height: 100vh;
+  height: auto;
+  background-color: rgb(67, 3, 187);
+}
+.sideNav > *{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.sideNav > *:hover{
+  background-color: rgb(81, 2, 228);
+}
+.sidePage{
+  width: 80%;
+  padding: 5vw;
+}
+.logPage > input, .radioForm{
+  display: block;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 0;
+  width: 100%;
+  outline: none;
+}
+input[type="submit"]{
+  max-width: 50%;
+}
+.qaForm > *{
+  color: rgb(0, 71, 129);
+  font-weight: normal;
+  display: block;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+.radioForm{
+  border: none;
+}
+.radioForm > *{
+  margin-right: 10px;
+}
+
+.coverProfile{
+  background-color: rgb(81, 2, 228);
+  height: 25vh;
+  padding: 10px;
+}
+.imgProfile{
+  width: 10rem;
+  height: 100%;
+}
+.nameJob{
+  padding-top: 20px;
+}
+.nameJob > *{
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+}
+.infoUser{
+  padding: 2rem
+}
+.labelInfo{
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 10px;
+}
+.labelInfo > *{
+  text-align: center;
+  padding-top: 5px;
+}
+.loading{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1e1e1;
+  font-size: 3rem;
+  width: 100%;
+  height: 100vh;
+}
+.blue{
+  color: rgb(3 65 235);
+}
+.red{
+  color:rgb(185, 0, 0)
+}
+.green{
+  color: green;
+}
+.gray{
+  color: rgb(44, 44, 44);
+}
+.tabs{
+  border-bottom: 1px solid gray;
+}
+.btnTab{
+  background-color: transparent;
+  color: black;
+  outline: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.tabcontent{
+  display: none;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.articleItem{
+  padding: 10px;
+}
+.articleItem >*{
+  padding: 5px;
+}
+.itemImg{
+  width: 100%;
+  height: 35vh;
+}
+.itemTitle{
+  font-size: 1rem;
+  width: 100%;
+  padding-top: 10px;
+}
+.activeTab{
+  background-color: royalblue;
+  color: white;
+}
+.activeContent{
+  display: block;
+}
+.commentList{
+  width: 100%;
+}
+.commentList > *{
+  width: 100%;
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.countComment::before{
+  content: '( ';
+}
+.countComment::after{
+  content: ' )';
+}
+.commentHead > *{
+  padding: 10px;
+}
+.commentTitle{
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 0 !important;
+}
+.commentImg{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.commentText{
+  padding: 10px;
+  background-color: #ececec;
+}
+.pagenation{
+  padding: 10px;
+}
+.pagenation > button{
+  border: none;
+}
+.pagenation > a{
+  border: 2px solid transparent;
+}
+.pagenation > a:hover{
+  background-color: rgb(216, 216, 216);
+  border: 2px solid rgb(216, 216, 216);
+}
+.selectPage, .pagenation > a ,.pagenation > button{
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px;
+}
+.addArticel{
+  width: 80%;
+}
+.addArticle > *{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+.error{
+  background-color: #ff00004f;
+  color: black;
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.links-sm{
+    background: white;
+    float: left;
+    min-height: 100vh;
+    height: auto;
+    padding: 15px;
+}
+.activeSideMenu{
+  display: block !important;
+}
+.menuIcon{
+  background: unset;
+  border: none;
+}
+.sideMenu{
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  display: none;
+  background: #87858570;
+}
+.errorPage{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+  font-size: 5vw;
+  font-family: monospace;
+  color: rgb(63, 63, 63);
+}
+
+
+/* Here Write Media Query */
+
+@media only screen and (min-width: 0) {
+    .sm-d-none{
+      display: none !important;
+    }
+    .sm-d-block{
+      display: block !important;
+    }
+    .container{
+      padding: 1.5rem 1rem;
+      background-color: white;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+    }
+    .article{
+      width: 100%;
+      padding: 10px;
+    }
+  
+}
+@media only screen and (min-width: 576px) {
+  .md-d-none{
+    display: none !important;
+  }
+  .md-d-block{
+    display: block !important;
+  }
+  .container{
+    padding: 2rem;
+    margin: 1rem 3rem;
+  }
+  .article{
+    width: 50%;
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .lg-d-none{
+    display: none !important;
+  }
+  .lg-d-block{
+    display: block !important;
+  }
+  .container{
+    margin: 2rem 14rem;
+  }
+  .article{
+    width: 33.33%;
+    padding: 15px;
+  }
+  
+}
+
+/* Here Write Properties */
+
+
+/* Here Dashboard */
+.filter{
+  padding: 10px;
+  width: 100%;
+  outline: none;
+}
+.btnPagination > *{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background: rgb(67, 3, 187);
+  margin: 5px;
+}
+.btnSection > *{
+  width: 50%;
+  padding: 10px;
+  border: 1px solid rgb(187, 187, 187)
+}
+.activeSection{
+  background-color: rgb(67 3 187);
+  color: white;
+  border: none;
+}
+.sidePage > *{
+  margin-top: 5px;
+}
+.sidePage > select{
+  width: 100%;
+}
+.editSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(82, 81, 81);
+  padding: 10px;
+}
+.update{
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #00000070;
+  left: 0;
+  height: 100vh;
+  margin: 0;
+}
+.update > *{
+  background: white;
+  padding: 2rem 2rem;
+  border-radius: 5px;
+}
+.update > form > *{
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  width: 100%;
+}
+.radioContent > *{
+  padding: 5px;
+}
+.controller > *{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  color: white;
+}
